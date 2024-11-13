@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churrascômetro: O Churrasco na Medida Certa!</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div id="topo">
+      <br>
+      <h1>Churrascômetro</h1>
+      <img width="110px" height="110px" src="logo.jpg" alt="churrasco">
+      <p>Calcule a quantidade ideal de ingredientes para o seu churrasco!</p>
+      <p id="resultadoCarne"></p>
+  </div>
+    
+<div id="formulario">
+    <label for="homens">Homens:</label>
+    <input type="number" id="homens" min="0" value="0">
+
+    <label for="mulheres">Mulheres:</label>
+    <input type="number" id="mulheres" min="0" value="0">
+
+    <label for="criancas">Crianças:</label>
+    <input type="number" id="criancas" min="0" value="0">
+
+    <p><button id="btnCalcular">Calcular</button></p>
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

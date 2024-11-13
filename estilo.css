@@ -1,0 +1,66 @@
+body {
+    width: 60%; /* Ajuste o tamanho conforme desejado */
+    height: 640px; /* Ajuste o tamanho conforme desejado */
+    border: 5px solid #000; /* Cor e espessura da borda */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Arial, sans-serif;    
+    background-color: hsl(57, 98%, 51%);
+}
+
+#topo {
+    background: #DA5E5B;
+    width: 100%;
+    height: 310px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    position: relative; 
+    
+}
+
+div{
+    text-align: center;
+}
+
+p,h1,h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+#formulario {
+    
+    width: 280px; /* Ajuste o tamanho conforme desejado */
+    height: 260px; /* Ajuste o tamanho conforme desejado */
+    border: 5px solid #000; /* Cor e espessura da borda */
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+#formulario label {
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#formulario input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+#btnCalcular {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#resultado{
+display: flex;
+flex-direction: column;
+}
+
