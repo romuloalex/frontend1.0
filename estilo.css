@@ -1,88 +1,134 @@
+/* Estilos Gerais */
 body {
-    width: 60%; /* Ajuste o tamanho conforme desejado */
-    min-height: 640px; /* Garantir altura mínima */
-    border: 5px solid #000; /* Cor e espessura da borda */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
     font-family: Arial, sans-serif;
-    background-color: hsl(57, 98%, 51%);
-    box-sizing: border-box; /* Garantir que paddings e bordas sejam inclusos nas dimensões */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 #topo {
-    background: #DA5E5B;
-    width: 100%;
-    height: 310px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #e53935;
+    margin: 0;
 }
 
 #topo img {
-    max-width: 100px;
-    height: auto;
-}
-
-#topo h1 {
-    font-size: 2.5em;
-    margin: 10px 0;
-}
-
-#topo p {
-    font-size: 1.1em;
+    width: 100px;
+    height: 100px;
     margin: 10px 0;
 }
 
 #formulario {
-    width: 280px; /* Ajuste o tamanho conforme desejado */
-    padding: 20px;
-    border: 5px solid #000;
-    position: absolute;
-    top: 65%; /* Ajuste da posição */
-    left: 50%;
-    transform: translateX(-50%);
     background-color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
 }
 
-#formulario label {
-    margin-top: 15px;
+label {
+    font-size: 1.2em;
     display: block;
-    font-size: 1.1em;
+    margin: 10px 0 5px;
 }
 
-#formulario input[type="number"] {
+input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px; /* Espaço entre os campos */
+    font-size: 1.1em;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1em;
 }
 
-#btnCalcular {
-    padding: 10px 20px;
-    background-color: #007bff;
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #e53935;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1.2em;
+    transition: background-color 0.3s ease;
 }
 
-#btnCalcular:hover {
-    background-color: #0056b3;
+button:hover {
+    background-color: #d32f2f;
 }
 
-#resultado {
+/* Resultado */
+#resultadoCarne {
     margin-top: 20px;
     font-size: 1.2em;
-    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #topo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    input {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 1.1em;
+    }
+
+    #formulario {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #topo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    label {
+        font-size: 0.9em;
+    }
+
+    input {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    #formulario {
+        padding: 10px;
+    }
 }
