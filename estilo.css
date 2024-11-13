@@ -1,120 +1,66 @@
-/* Estilos gerais para o body */
 body {
-    width: 80%;  /* Usa uma largura percentual para permitir redimensionamento */
-    max-width: 640px;  /* Limite de largura máxima */
-    height: auto;  /* Altura automática para que o conteúdo se ajuste */
+    width: 60%; /* Ajuste o tamanho conforme desejado */
+    height: 640px; /* Ajuste o tamanho conforme desejado */
     border: 5px solid #000; /* Cor e espessura da borda */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;    
     background-color: hsl(57, 98%, 51%);
-    padding: 20px; /* Espaçamento interno */
-    box-sizing: border-box; /* Para incluir o padding nas dimensões totais */
 }
 
-/* Estilo para a parte do topo */
 #topo {
     background: #DA5E5B;
     width: 100%;
     height: 310px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-    position: relative;
+    position: relative; 
+    
 }
 
-/* Definições de texto para os elementos */
-div {
+div{
     text-align: center;
 }
 
-p, h1, h2 {
+p,h1,h2{
     text-align: center;
     font-weight: bold;
 }
 
-/* Estilo para o formulário */
 #formulario {
-    width: 100%;  /* Usa 100% da largura disponível */
-    max-width: 300px;  /* Limite de largura máxima */
-    margin: 20px auto;  /* Centraliza o formulário */
-    padding: 20px;
-    border: 5px solid #000;
-    position: relative;
-    box-sizing: border-box; /* Inclui o padding nas dimensões totais */
-}
-
-/* Estilo para os labels dentro do formulário */
+    
+    width: 280px; /* Ajuste o tamanho conforme desejado */
+    height: 260px; /* Ajuste o tamanho conforme desejado */
+    border: 5px solid #000; /* Cor e espessura da borda */
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
 #formulario label {
     margin-top: 10px;
     display: block;
     margin-bottom: 5px;
 }
 
-/* Estilo para o input de número */
 #formulario input[type="number"] {
-    width: 100%;  /* Faz o input ocupar toda a largura disponível */
-    padding: 10px;
+    width: 100px;
+    padding: 5px;
     border: 1px solid #ccc;
-    margin-bottom: 10px; /* Espaçamento inferior entre os inputs */
 }
-
-/* Estilo para o botão */
 #btnCalcular {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
-    width: 100%;  /* Faz o botão ocupar toda a largura disponível */
-    font-size: 16px;
 }
 
-/* Responsividade com media queries */
-@media (max-width: 768px) {
-    body {
-        width: 90%;  /* Ajusta a largura para 90% da tela em dispositivos menores */
-        height: auto;
-        padding: 10px;  /* Diminui o padding em telas menores */
-    }
-
-    #topo {
-        height: 250px;  /* Ajusta a altura do topo em telas menores */
-    }
-
-    #formulario {
-        max-width: 260px;  /* Ajusta a largura do formulário */
-    }
-
-    #formulario input[type="number"] {
-        width: 100%;  /* Garante que o input ocupe toda a largura disponível */
-    }
-
-    #btnCalcular {
-        font-size: 14px;  /* Diminui o tamanho da fonte do botão */
-    }
+#resultado{
+display: flex;
+flex-direction: column;
 }
 
-@media (max-width: 480px) {
-    body {
-        width: 95%;  /* Ajusta a largura para 95% em telas muito pequenas */
-        padding: 10px;
-    }
-
-    #topo {
-        height: 200px;  /* Reduz ainda mais a altura do topo */
-    }
-
-    #formulario {
-        max-width: 240px;  /* Ajusta a largura máxima do formulário */
-    }
-
-    #formulario input[type="number"] {
-        padding: 8px;  /* Ajusta o padding para telas pequenas */
-    }
-
-    #btnCalcular {
-        font-size: 14px;  /* Garante que o botão ainda tenha um tamanho adequado */
-    }
-}
