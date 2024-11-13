@@ -1,134 +1,120 @@
-/* Estilos Gerais */
+/* Estilos gerais para o body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-#topo {
+    width: 80%;  /* Usa uma largura percentual para permitir redimensionamento */
+    max-width: 640px;  /* Limite de largura máxima */
+    height: auto;  /* Altura automática para que o conteúdo se ajuste */
+    border: 5px solid #000; /* Cor e espessura da borda */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: hsl(57, 98%, 51%);
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Para incluir o padding nas dimensões totais */
 }
 
-h1 {
-    font-size: 2.5em;
-    color: #e53935;
-    margin: 0;
+/* Estilo para a parte do topo */
+#topo {
+    background: #DA5E5B;
+    width: 100%;
+    height: 310px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
-#topo img {
-    width: 100px;
-    height: 100px;
-    margin: 10px 0;
+/* Definições de texto para os elementos */
+div {
+    text-align: center;
 }
 
+p, h1, h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilo para o formulário */
 #formulario {
-    background-color: white;
+    width: 100%;  /* Usa 100% da largura disponível */
+    max-width: 300px;  /* Limite de largura máxima */
+    margin: 20px auto;  /* Centraliza o formulário */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    margin-top: 20px;
+    border: 5px solid #000;
+    position: relative;
+    box-sizing: border-box; /* Inclui o padding nas dimensões totais */
 }
 
-label {
-    font-size: 1.2em;
+/* Estilo para os labels dentro do formulário */
+#formulario label {
+    margin-top: 10px;
     display: block;
-    margin: 10px 0 5px;
+    margin-bottom: 5px;
 }
 
-input {
-    width: 100%;
+/* Estilo para o input de número */
+#formulario input[type="number"] {
+    width: 100%;  /* Faz o input ocupar toda a largura disponível */
     padding: 10px;
-    font-size: 1.1em;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    margin-bottom: 10px; /* Espaçamento inferior entre os inputs */
 }
 
-button {
-    width: 100%;
-    padding: 15px;
-    font-size: 1.2em;
-    background-color: #e53935;
+/* Estilo para o botão */
+#btnCalcular {
+    padding: 10px 20px;
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 100%;  /* Faz o botão ocupar toda a largura disponível */
+    font-size: 16px;
 }
 
-button:hover {
-    background-color: #d32f2f;
-}
-
-/* Resultado */
-#resultadoCarne {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #333;
-    text-align: center;
-}
-
-/* Media Queries */
+/* Responsividade com media queries */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2em;
+    body {
+        width: 90%;  /* Ajusta a largura para 90% da tela em dispositivos menores */
+        height: auto;
+        padding: 10px;  /* Diminui o padding em telas menores */
     }
 
-    #topo img {
-        width: 80px;
-        height: 80px;
-    }
-
-    label {
-        font-size: 1em;
-    }
-
-    input {
-        font-size: 1em;
-    }
-
-    button {
-        font-size: 1.1em;
+    #topo {
+        height: 250px;  /* Ajusta a altura do topo em telas menores */
     }
 
     #formulario {
-        padding: 15px;
+        max-width: 260px;  /* Ajusta a largura do formulário */
+    }
+
+    #formulario input[type="number"] {
+        width: 100%;  /* Garante que o input ocupe toda a largura disponível */
+    }
+
+    #btnCalcular {
+        font-size: 14px;  /* Diminui o tamanho da fonte do botão */
     }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.8em;
+    body {
+        width: 95%;  /* Ajusta a largura para 95% em telas muito pequenas */
+        padding: 10px;
     }
 
-    #topo img {
-        width: 70px;
-        height: 70px;
-    }
-
-    label {
-        font-size: 0.9em;
-    }
-
-    input {
-        font-size: 1em;
-        padding: 8px;
-    }
-
-    button {
-        font-size: 1em;
-        padding: 12px;
+    #topo {
+        height: 200px;  /* Reduz ainda mais a altura do topo */
     }
 
     #formulario {
-        padding: 10px;
+        max-width: 240px;  /* Ajusta a largura máxima do formulário */
+    }
+
+    #formulario input[type="number"] {
+        padding: 8px;  /* Ajusta o padding para telas pequenas */
+    }
+
+    #btnCalcular {
+        font-size: 14px;  /* Garante que o botão ainda tenha um tamanho adequado */
     }
 }
